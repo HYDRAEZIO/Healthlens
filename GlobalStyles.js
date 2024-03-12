@@ -1,6 +1,6 @@
 /* fonts */
 export const FontFamily = {
-  sourceSansPro: "Source Sans Pro",
+  sourceSansPro: "SourceSansPro",
   robotoBold: "Roboto-Bold",
 };
 /* font sizes */
@@ -22,3 +22,8 @@ export const Color = {
   colorBlack: "#000",
   colorDimgray: "#5d5d5b",
 };
+
+export const ButtonSize={
+  width:'100%',
+  height:'100%'
+}

@@ -1,9 +1,9 @@
 import * as React from "react";
 import { Image } from "expo-image";
-import { StyleSheet, Text, View } from "react-native";
-import { FontFamily, Color, FontSize } from "../GlobalStyles";
+import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { FontFamily, Color, FontSize, ButtonSize } from "../GlobalStyles";
 
-const SignUp = () => {
+const SignUp = ({ navigation }) => {
   return (
     <View style={styles.signUp1}>
       <Image
@@ -43,12 +43,19 @@ const SignUp = () => {
         </Text>
       </View>
       <View style={styles.group4}>
-        <Image
-          style={[styles.vectorIcon, styles.iconLayout]}
-          contentFit="cover"
-          source={require("../assets/vector6.png")}
-        />
-        <Text style={styles.logIn}>Log in</Text>
+        <TouchableOpacity
+          style={ButtonSize}
+          onPress={() => {
+            navigation.navigate("Home");
+          }}
+        >
+          <Image
+            style={[styles.vectorIcon, styles.iconLayout]}
+            contentFit="cover"
+            source={require("../assets/vector6.png")}
+          />
+          <Text style={styles.logIn}>Log in</Text>
+        </TouchableOpacity>
       </View>
       <View style={styles.group5}>
         <Text style={[styles.or, styles.orTypo]}>or</Text>
@@ -80,9 +87,13 @@ const SignUp = () => {
         <Text style={[styles.google, styles.googleTypo]}>Google</Text>
       </View>
       <View style={styles.group8}>
-        <Text style={[styles.newToHealthconnect, styles.healthconnectPosition]}>
-          New to HealthConnect? Sign up
-        </Text>
+        <TouchableOpacity onPress={()=>{navigation.navigate('')}}>
+          <Text
+            style={[styles.newToHealthconnect, styles.healthconnectPosition]}
+          >
+            New to HealthConnect? Sign up
+          </Text>
+        </TouchableOpacity>
       </View>
       <Image
         style={[styles.groupIcon2, styles.iconLayout]}

@@ -1,9 +1,10 @@
 import * as React from "react";
 import { Image } from "expo-image";
-import { StyleSheet, Text, View } from "react-native";
-import { FontFamily, Color, FontSize } from "../GlobalStyles";
+import { StyleSheet, Text, View,TouchableOpacity } from "react-native";
+import { FontFamily, Color, FontSize,ButtonSize} from "../GlobalStyles";
 
-const WelcomePage = () => {
+
+const WelcomePage = ({navigation}) => {
   return (
     <View style={styles.welcomePage1}>
       <Image
@@ -22,14 +23,19 @@ const WelcomePage = () => {
         source={require("../assets/mask-group2.png")}
       />
       <View style={[styles.group1, styles.groupLayout]}>
-        <Image
-          style={[styles.vectorIcon, styles.groupIconLayout]}
-          contentFit="cover"
-          source={require("../assets/vector4.png")}
-        />
-        <Text style={[styles.getStarted, styles.getStartedTypo]}>
-          Get started
-        </Text>
+        <TouchableOpacity
+          style={ButtonSize}
+          onPress={() => {navigation.navigate("SignUp")}}
+        >
+          <Image
+            style={[styles.vectorIcon, styles.groupIconLayout]}
+            contentFit="cover"
+            source={require("../assets/vector4.png")}
+          />
+          <Text style={[styles.getStarted, styles.getStartedTypo]}>
+            Get started
+          </Text>
+        </TouchableOpacity>
       </View>
       <Image
         style={[styles.groupIcon, styles.groupIconLayout]}
