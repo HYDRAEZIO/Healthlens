@@ -1,6 +1,6 @@
 import React, { memo } from "react";
 import { Image } from "expo-image";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View , Dimensions} from "react-native";
 import { Color, FontFamily, FontSize } from "../GlobalStyles";
 
 const Profile = memo(() => {
@@ -141,6 +141,7 @@ const Profile = memo(() => {
     </View>
   );
 });
+const { width, height } = Dimensions.get('window');
 
 const styles = StyleSheet.create({
   groupIconLayout1: {

@@ -1,105 +1,183 @@
 import * as React from "react";
 import { Image } from "expo-image";
-import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
-import { FontFamily, Color, FontSize, ButtonSize } from "../GlobalStyles";
+import { StyleSheet, Text, View } from "react-native";
+import { FontSize, FontFamily, Color } from "../GlobalStyles";
 
-const SignUp = ({ navigation }) => {
+const SignUp2 = () => {
   return (
-    <View style={styles.signUp1}>
+    <View style={styles.signUp}>
       <Image
         style={[styles.vectorIcon, styles.iconLayout]}
         contentFit="cover"
-        source={require("../assets/vector3.png")}
+        source={require("../assets/vector30.png")}
       />
       <View style={styles.group}>
-        <Text style={[styles.healthconnect, styles.healthconnectPosition]}>
-          HealthConnect
+        <Text style={[styles.signUp1, styles.signUp1Position]}>Sign up</Text>
+      </View>
+      <View style={styles.group1}>
+        <Text style={[styles.createAnAccount, styles.doctorTypo]}>
+          Create an account for health management
         </Text>
       </View>
       <Image
-        style={styles.maskGroupIcon}
+        style={[styles.maskGroupIcon, styles.groupIconPosition]}
         contentFit="cover"
-        source={require("../assets/mask-group3.png")}
+        source={require("../assets/mask-group34.png")}
       />
-      <View style={[styles.group1, styles.groupPosition1]}>
-        <Image
-          style={[styles.vectorIcon, styles.iconLayout]}
-          contentFit="cover"
-          source={require("../assets/vector5.png")}
-        />
-        <Text style={[styles.email, styles.orTypo]}>Email</Text>
-      </View>
-      <View style={[styles.group2, styles.groupPosition1]}>
-        <Image
-          style={[styles.vectorIcon, styles.iconLayout]}
-          contentFit="cover"
-          source={require("../assets/vector5.png")}
-        />
-        <Text style={[styles.email, styles.orTypo]}>Password</Text>
-      </View>
-      <View style={styles.group3}>
-        <Text style={[styles.forgotYourPassword, styles.healthconnectPosition]}>
-          Forgot your password?
+      <View style={[styles.group2, styles.groupIconPosition]}>
+        <Text style={[styles.enterYourEMail, styles.doctorTypo]}>
+          Enter your e-mail address
         </Text>
       </View>
-      <View style={styles.group4}>
-        <TouchableOpacity
-          style={ButtonSize}
-          onPress={() => {
-            navigation.navigate("Home");
-          }}
-        >
-          <Image
-            style={[styles.vectorIcon, styles.iconLayout]}
-            contentFit="cover"
-            source={require("../assets/vector6.png")}
-          />
-          <Text style={styles.logIn}>Log in</Text>
-        </TouchableOpacity>
-      </View>
-      <View style={styles.group5}>
-        <Text style={[styles.or, styles.orTypo]}>or</Text>
+      <View style={[styles.group3, styles.groupLayout]}>
+        <Text style={[styles.enterYourEMail, styles.doctorTypo]}>
+          Enter your full name
+        </Text>
       </View>
       <Image
-        style={[styles.groupIcon, styles.groupIconLayout]}
+        style={[styles.maskGroupIcon1, styles.groupIconPosition]}
         contentFit="cover"
-        source={require("../assets/group21.png")}
+        source={require("../assets/mask-group35.png")}
       />
-      <Image
-        style={[styles.groupIcon1, styles.groupIconLayout]}
-        contentFit="cover"
-        source={require("../assets/group21.png")}
-      />
+      <View style={[styles.group4, styles.groupIconPosition]}>
+        <Text style={[styles.enterYourEMail, styles.doctorTypo]}>
+          Repeat password
+        </Text>
+      </View>
+      <View style={[styles.group5, styles.groupPosition]}>
+        <Image
+          style={[styles.vectorIcon, styles.iconLayout]}
+          contentFit="cover"
+          source={require("../assets/vector31.png")}
+        />
+        <Image
+          style={[styles.vectorIcon2, styles.iconLayout]}
+          contentFit="cover"
+          source={require("../assets/vector32.png")}
+        />
+        <Text style={[styles.sername123, styles.signUp2Typo]}>sername123</Text>
+      </View>
       <View style={[styles.group6, styles.groupPosition]}>
         <Image
           style={[styles.vectorIcon, styles.iconLayout]}
           contentFit="cover"
-          source={require("../assets/vector7.png")}
+          source={require("../assets/vector31.png")}
         />
-        <Text style={[styles.facebook, styles.googleTypo]}>Facebook</Text>
+        <Image
+          style={[styles.vectorIcon2, styles.iconLayout]}
+          contentFit="cover"
+          source={require("../assets/vector32.png")}
+        />
+        <Text style={[styles.sername123, styles.signUp2Typo]}>
+          irst Name Last Name
+        </Text>
       </View>
       <View style={[styles.group7, styles.groupPosition]}>
         <Image
           style={[styles.vectorIcon, styles.iconLayout]}
           contentFit="cover"
-          source={require("../assets/vector7.png")}
+          source={require("../assets/vector31.png")}
         />
-        <Text style={[styles.google, styles.googleTypo]}>Google</Text>
+        <Image
+          style={[styles.vectorIcon2, styles.iconLayout]}
+          contentFit="cover"
+          source={require("../assets/vector32.png")}
+        />
+        <Text style={[styles.sername123, styles.signUp2Typo]}>
+          *****************
+        </Text>
       </View>
-      <View style={styles.group8}>
-        <TouchableOpacity onPress={()=>{navigation.navigate('')}}>
-          <Text
-            style={[styles.newToHealthconnect, styles.healthconnectPosition]}
-          >
-            New to HealthConnect? Sign up
-          </Text>
-        </TouchableOpacity>
+      <View style={[styles.group8, styles.groupPosition]}>
+        <Image
+          style={[styles.vectorIcon, styles.iconLayout]}
+          contentFit="cover"
+          source={require("../assets/vector31.png")}
+        />
+        <Image
+          style={[styles.vectorIcon2, styles.iconLayout]}
+          contentFit="cover"
+          source={require("../assets/vector32.png")}
+        />
+        <Text style={[styles.sername123, styles.signUp2Typo]}>
+          *****************
+        </Text>
       </View>
       <Image
-        style={[styles.groupIcon2, styles.iconLayout]}
+        style={[styles.frameIcon, styles.frameIconLayout1]}
         contentFit="cover"
-        source={require("../assets/group22.png")}
+        source={require("../assets/frame47.png")}
       />
+      <Image
+        style={[styles.frameIcon1, styles.frameIconLayout1]}
+        contentFit="cover"
+        source={require("../assets/frame48.png")}
+      />
+      <Image
+        style={[styles.frameIcon2, styles.frameIconLayout1]}
+        contentFit="cover"
+        source={require("../assets/frame49.png")}
+      />
+      <Image
+        style={[styles.vectorIcon9, styles.group12Position]}
+        contentFit="cover"
+        source={require("../assets/vector2.png")}
+      />
+      <View style={[styles.group9, styles.groupPosition]}>
+        <Image
+          style={[styles.vectorIcon, styles.iconLayout]}
+          contentFit="cover"
+          source={require("../assets/vector31.png")}
+        />
+        <Image
+          style={[styles.vectorIcon2, styles.iconLayout]}
+          contentFit="cover"
+          source={require("../assets/vector32.png")}
+        />
+        <Text style={[styles.sername123, styles.signUp2Typo]}>
+          mail@email.com
+        </Text>
+      </View>
+      <Image
+        style={[styles.frameIcon3, styles.frameIconLayout]}
+        contentFit="cover"
+        source={require("../assets/frame50.png")}
+      />
+      <Image
+        style={[styles.frameIcon4, styles.frameIconLayout]}
+        contentFit="cover"
+        source={require("../assets/frame51.png")}
+      />
+      <View style={[styles.group10, styles.groupPosition]}>
+        <Image
+          style={[styles.vectorIcon, styles.iconLayout]}
+          contentFit="cover"
+          source={require("../assets/vector33.png")}
+        />
+        <Text style={[styles.signUp2, styles.signUp2Typo]}>Sign up</Text>
+      </View>
+      <Image
+        style={[styles.groupIcon, styles.iconLayout]}
+        contentFit="cover"
+        source={require("../assets/group113.png")}
+      />
+      <View style={[styles.group11, styles.groupLayout]}>
+        <Image
+          style={[styles.vectorIcon, styles.iconLayout]}
+          contentFit="cover"
+          source={require("../assets/vector34.png")}
+        />
+        <Text style={[styles.doctor, styles.doctorClr]}>Doctor</Text>
+        <Image
+          style={[styles.frameIcon5, styles.iconLayout]}
+          contentFit="cover"
+          source={require("../assets/frame52.png")}
+        />
+      </View>
+      <View style={[styles.group12, styles.group12Position]}>
+        <Text style={[styles.chooseYourRole, styles.doctorClr]}>
+          Choose your role
+        </Text>
+      </View>
     </View>
   );
 };
@@ -108,203 +186,287 @@ const styles = StyleSheet.create({
   iconLayout: {
     maxHeight: "100%",
     maxWidth: "100%",
-    position: "absolute",
     overflow: "hidden",
   },
-  healthconnectPosition: {
+  signUp1Position: {
     textAlign: "left",
-    fontFamily: FontFamily.sourceSansPro,
-    color: Color.colorGray_400,
     left: "0%",
     top: "0%",
     position: "absolute",
   },
-  groupPosition1: {
-    left: "6.53%",
-    right: "6.53%",
-    width: "86.93%",
-    height: "7.05%",
+  doctorTypo: {
+    fontSize: FontSize.size_sm,
+    fontFamily: FontFamily.sourceSansPro,
+  },
+  groupIconPosition: {
+    left: "5.33%",
+    height: "1.81%",
+  },
+  groupLayout: {
+    width: "31.73%",
     position: "absolute",
   },
-  orTypo: {
+  groupPosition: {
+    right: "5.33%",
+    width: "89.33%",
+    height: "4.82%",
+    left: "5.33%",
+    position: "absolute",
+  },
+  signUp2Typo: {
+    top: "31.25%",
     fontSize: FontSize.size_sm,
     textAlign: "left",
     fontFamily: FontFamily.sourceSansPro,
     position: "absolute",
   },
-  groupIconLayout: {
-    bottom: "24.14%",
-    top: "75.71%",
-    width: "37.6%",
-    height: "0.15%",
+  frameIconLayout1: {
+    left: "84.53%",
+    right: "11.73%",
+    width: "3.73%",
+    height: "1.41%",
     maxHeight: "100%",
     maxWidth: "100%",
     position: "absolute",
     overflow: "hidden",
   },
-  groupPosition: {
-    bottom: "13.04%",
-    top: "79.76%",
-    width: "41.87%",
-    height: "7.2%",
+  group12Position: {
+    right: "73.33%",
     position: "absolute",
   },
-  googleTypo: {
-    top: "31.25%",
+  frameIconLayout: {
+    left: "84.27%",
+    right: "12%",
+    width: "3.73%",
+    height: "1.41%",
+    maxHeight: "100%",
+    maxWidth: "100%",
+    position: "absolute",
+    overflow: "hidden",
+  },
+  doctorClr: {
     color: Color.colorBlack,
-    fontSize: FontSize.size_sm,
     textAlign: "left",
-    fontFamily: FontFamily.sourceSansPro,
-    fontWeight: "700",
     position: "absolute",
   },
   vectorIcon: {
     height: "100%",
-    right: "0%",
-    bottom: "0%",
     left: "0%",
-    top: "0%",
-    maxHeight: "100%",
+    bottom: "0%",
     maxWidth: "100%",
+    right: "0%",
+    position: "absolute",
     width: "100%",
+    top: "0%",
   },
-  healthconnect: {
-    fontSize: FontSize.size_5xl,
-    fontWeight: "700",
+  signUp1: {
+    fontSize: 32,
+    color: Color.colorGray_200,
     textAlign: "left",
     fontFamily: FontFamily.sourceSansPro,
+    fontWeight: "700",
   },
   group: {
-    height: "4.5%",
-    width: "42.4%",
-    top: "25.26%",
-    right: "28.27%",
-    bottom: "70.24%",
-    left: "29.33%",
+    height: "4.02%",
+    width: "28%",
+    top: "24.02%",
+    right: "36%",
+    bottom: "71.96%",
+    left: "36%",
+    position: "absolute",
+  },
+  createAnAccount: {
+    color: Color.colorDimgray,
+    textAlign: "left",
+    left: "0%",
+    top: "0%",
+    position: "absolute",
+  },
+  group1: {
+    width: "65.6%",
+    top: "28.94%",
+    right: "17.07%",
+    bottom: "69.25%",
+    left: "17.33%",
+    height: "1.81%",
     position: "absolute",
   },
   maskGroupIcon: {
-    height: "3.6%",
-    top: "29.99%",
-    bottom: "66.42%",
-    left: "6.4%",
-    right: "6.4%",
-    width: "87.2%",
+    top: "54.47%",
+    bottom: "43.72%",
+    right: "41.33%",
+    width: "53.33%",
+    left: "5.33%",
     maxHeight: "100%",
     maxWidth: "100%",
     position: "absolute",
     overflow: "hidden",
   },
-  email: {
-    top: "30.85%",
-    left: "2.45%",
-    color: Color.colorGray_100,
-  },
-  group1: {
-    top: "38.46%",
-    bottom: "54.5%",
+  enterYourEMail: {
+    textAlign: "left",
+    left: "0%",
+    top: "0%",
+    position: "absolute",
+    color: Color.colorGray_200,
   },
   group2: {
-    top: "48.05%",
-    bottom: "44.9%",
-  },
-  forgotYourPassword: {
-    fontSize: 10,
+    width: "40%",
+    top: "45.03%",
+    right: "54.67%",
+    bottom: "53.17%",
+    position: "absolute",
   },
   group3: {
-    height: "1.95%",
-    width: "25.33%",
-    top: "56.37%",
-    bottom: "41.68%",
-    left: "68.27%",
-    right: "6.4%",
-    position: "absolute",
+    top: "35.58%",
+    right: "62.93%",
+    bottom: "62.61%",
+    left: "5.33%",
+    height: "1.81%",
   },
-  logIn: {
-    top: "29.17%",
-    left: "43.73%",
-    fontSize: FontSize.size_base,
-    color: Color.colorBlack,
-    textAlign: "left",
-    fontFamily: FontFamily.sourceSansPro,
-    fontWeight: "700",
+  maskGroupIcon1: {
+    top: "63.92%",
+    bottom: "34.27%",
+    right: "41.33%",
+    width: "53.33%",
+    left: "5.33%",
+    maxHeight: "100%",
+    maxWidth: "100%",
     position: "absolute",
+    overflow: "hidden",
   },
   group4: {
-    top: "63.12%",
-    bottom: "29.69%",
-    height: "7.2%",
-    left: "6.4%",
-    right: "6.4%",
-    width: "87.2%",
+    width: "26.93%",
+    top: "74.17%",
+    right: "67.73%",
+    bottom: "24.02%",
     position: "absolute",
   },
-  or: {
-    color: Color.colorGray_400,
-    fontSize: FontSize.size_sm,
+  vectorIcon2: {
+    height: "2.08%",
+    top: "97.92%",
+    left: "0%",
+    bottom: "0%",
+    maxWidth: "100%",
+    right: "0%",
+    position: "absolute",
+    width: "100%",
+  },
+  sername123: {
+    left: "2.39%",
+    color: Color.colorGray_100,
+  },
+  group5: {
+    top: "57.49%",
+    bottom: "37.69%",
+  },
+  group6: {
+    top: "38.59%",
+    bottom: "56.58%",
+  },
+  group7: {
+    top: "66.93%",
+    bottom: "28.24%",
+  },
+  group8: {
+    top: "77.19%",
+    bottom: "17.99%",
+  },
+  frameIcon: {
+    top: "68.64%",
+    bottom: "29.95%",
+  },
+  frameIcon1: {
+    top: "78.89%",
+    bottom: "19.7%",
+  },
+  frameIcon2: {
+    top: "59.2%",
+    bottom: "39.4%",
+  },
+  vectorIcon9: {
+    height: "10.05%",
+    width: "26.67%",
+    bottom: "89.95%",
+    maxHeight: "100%",
+    maxWidth: "100%",
+    overflow: "hidden",
     left: "0%",
     top: "0%",
   },
-  group5: {
-    height: "2.7%",
-    width: "3.47%",
-    top: "74.21%",
-    right: "48.27%",
-    bottom: "23.09%",
-    left: "48.27%",
-    position: "absolute",
+  group9: {
+    top: "48.04%",
+    bottom: "47.14%",
+  },
+  frameIcon3: {
+    top: "49.75%",
+    bottom: "48.84%",
+  },
+  frameIcon4: {
+    top: "40.3%",
+    bottom: "58.29%",
+  },
+  signUp2: {
+    left: "43.13%",
+    color: Color.colorWhite,
+    fontWeight: "700",
+    top: "31.25%",
+  },
+  group10: {
+    top: "93.27%",
+    bottom: "1.91%",
   },
   groupIcon: {
-    left: "56%",
-    right: "6.4%",
+    height: "20.1%",
+    top: "2.01%",
+    bottom: "77.89%",
+    left: "0%",
+    right: "0%",
+    maxWidth: "100%",
+    position: "absolute",
+    width: "100%",
   },
-  groupIcon1: {
-    right: "56%",
-    left: "6.4%",
-  },
-  facebook: {
-    left: "31.53%",
-  },
-  group6: {
-    right: "51.73%",
-    left: "6.4%",
-  },
-  google: {
-    left: "36.62%",
-  },
-  group7: {
-    left: "51.73%",
-    right: "6.4%",
-  },
-  newToHealthconnect: {
-    fontSize: FontSize.size_xs,
-    fontWeight: "700",
-    textAlign: "left",
+  doctor: {
+    top: "24.29%",
+    left: "6.72%",
+    fontSize: FontSize.size_sm,
     fontFamily: FontFamily.sourceSansPro,
   },
-  group8: {
-    height: "2.25%",
-    width: "44.27%",
-    top: "90.03%",
-    right: "27.2%",
-    bottom: "7.72%",
-    left: "28.53%",
+  frameIcon5: {
+    height: "40%",
+    width: "11.76%",
+    top: "30%",
+    right: "6.72%",
+    bottom: "30%",
+    left: "81.51%",
     position: "absolute",
   },
-  groupIcon2: {
-    height: "19.19%",
-    width: "34.13%",
-    top: "6%",
-    right: "32.8%",
-    bottom: "74.81%",
-    left: "33.07%",
+  group11: {
+    height: "3.52%",
+    top: "86.58%",
+    right: "62.8%",
+    bottom: "9.9%",
+    left: "5.47%",
   },
-  signUp1: {
+  chooseYourRole: {
+    fontSize: FontSize.size_xs,
+    fontFamily: FontFamily.robotoRegular,
+    left: "0%",
+    top: "0%",
+  },
+  group12: {
+    width: "21.33%",
+    top: "83.92%",
+    bottom: "14.67%",
+    height: "1.41%",
+    right: "73.33%",
+    left: "5.33%",
+  },
+  signUp: {
     flex: 1,
-    height: 667,
+    height: 995,
     overflow: "hidden",
     width: "100%",
   },
 });
 
-export default SignUp;
+export default SignUp2;

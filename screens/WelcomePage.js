@@ -14,7 +14,7 @@ const WelcomePage = ({navigation}) => {
       />
       <View style={styles.group}>
         <Text style={[styles.healthconnect, styles.getStartedTypo]}>
-          HealthConnect
+          HealthLens
         </Text>
       </View>
       <Image
@@ -25,7 +25,7 @@ const WelcomePage = ({navigation}) => {
       <View style={[styles.group1, styles.groupLayout]}>
         <TouchableOpacity
           style={ButtonSize}
-          onPress={() => {navigation.navigate("SignUp")}}
+          onPress={() => {navigation.navigate("login")}}
         >
           <Image
             style={[styles.vectorIcon, styles.groupIconLayout]}
@@ -73,7 +73,8 @@ const styles = StyleSheet.create({
     maxWidth: "100%",
   },
   healthconnect: {
-    fontSize: 36,
+    fontSize: 42,
+    textAlign: "left",
     color: Color.colorGray_400,
     left: "0%",
     top: "0%",

@@ -12,6 +12,7 @@ import HealthCheckup from "../screens/HealthCheckup";
 import Medicines from "../screens/Medicines";
 import Profile1 from "../screens/Profile1";
 import MedicalCourses from "../screens/MedicalCourses";
+import login from "../screens/login";
 
 const Stack = createStackNavigator();
 
@@ -73,6 +74,17 @@ function MyStack() {
         component={MedicalCourses}
         options={{ headerShown: false }}
       />
+      <Stack.Screen 
+          name="login"
+          component={login}
+          options={{login: false}}
+       />
+      <Stack.Screen
+        name="Profile"
+        component={Profile}
+        options={{ headerShown: false }}
+      />
+
     </Stack.Navigator>
   );
 }
