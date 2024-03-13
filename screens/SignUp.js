@@ -1,12 +1,20 @@
-import React, { useState } from 'react';
-import { StyleSheet, Text, View, TextInput, TouchableOpacity, Image } from 'react-native';
+import React, { useState } from "react";
+import {
+  StyleSheet,
+  Text,
+  View,
+  TextInput,
+  TouchableOpacity,
+  Image,
+} from "react-native";
+import { Picker } from "@react-native-picker/picker";
 
 export default function SignUp({ navigation }) {
-  const [fullName, setFullName] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
-  const [role, setRole] = useState('');
+  const [fullName, setFullName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [role, setRole] = useState("");
 
   return (
     <View style={styles.container}>
@@ -43,21 +51,28 @@ export default function SignUp({ navigation }) {
           placeholder="Confirm Password"
           placeholderTextColor="#003f5c"
           secureTextEntry={true}
-          onChangeText={(confirmPassword) => setConfirmPassword(confirmPassword)}
+          onChangeText={(confirmPassword) =>
+            setConfirmPassword(confirmPassword)
+          }
         />
       </View>
       <View style={styles.inputView}>
-        <TextInput
-          style={styles.TextInput}
-          placeholder="Choose your role"
-          placeholderTextColor="#003f5c"
-          onChangeText={(role) => setRole(role)}
-        />
+        <Picker
+          style={styles.picker}
+          selectedValue={role}
+          onValueChange={(itemValue) => setRole(itemValue)}
+        >
+          <Picker.Item label="Choose your role" value="" />
+          <Picker.Item label="Doctor" value="doctor" />
+          <Picker.Item label="Patient" value="patient" />
+        </Picker>
       </View>
-      <TouchableOpacity onPress={() => navigation.navigate("Login")} style={styles.loginBtn}>
+      <TouchableOpacity
+        onPress={() => navigation.navigate("Home")}
+        style={styles.loginBtn}
+      >
         <Text style={styles.signUpText}>Sign Up</Text>
       </TouchableOpacity>
-      
     </View>
   );
 }
@@ -99,9 +114,13 @@ const styles = StyleSheet.create({
     marginTop: 40,
     backgroundColor: "#F60719",
   },
-   helloText: {
+  helloText: {
     marginBottom: 40,
     fontSize: 24,
-    fontWeight: 'bold',
+    fontWeight: "bold",
+  },
+  picker: {
+    height: 50,
+    width: "100%",
   },
 });
