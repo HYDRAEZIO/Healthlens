@@ -28,6 +28,12 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "27a07c28-9abe-4d15-b52c-08c23e14a8dd"
+      }
+    },
+    "owner": "poorvatalekar"
   }
 }
