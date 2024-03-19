@@ -1,6 +1,6 @@
 import * as React from "react";
-import { Image, Dimensions, StyleSheet, Text, View , ScrollView, Button } from "react-native";
-import { Color, FontFamily, FontSize } from "../GlobalStyles";
+import { Image, Dimensions, StyleSheet, Text, View , ScrollView, Button ,TouchableOpacity } from "react-native";
+import { Color, FontFamily, FontSize ,ButtonSize } from "../GlobalStyles";
 
 
 const { width, height } = Dimensions.get("window");
@@ -34,33 +34,34 @@ const Home = ({navigation}) => {
       <View style={styles.section}>
         <Text style={styles.sectionTitle}>Your Health Products</Text>
         <View style={styles.productGrid}>
+          
           <View style={styles.productItem}>
             <Image
               style={styles.productIcon}
               source={require("../assets/group8.png")}
             />
-            <Text style={styles.productText}>Health</Text>
+            <Button title="Health"  backgroundColor = "#ffaca0"  onPress={() => {navigation.navigate("Profile1")}} />
           </View>
           <View style={styles.productItem}>
             <Image
               style={styles.productIcon}
               source={require("../assets/group10.png")}
             />
-            <Text style={styles.productText}>Medicines</Text>
+           <Button title="Medicines"  backgroundColor = "#ffaca0"  onPress={() => {navigation.navigate("Medicines")}} />
           </View>
           <View style={styles.productItem}>
             <Image
               style={styles.productIcon}
               source={require("../assets/group12.png")}
             />
-            <Text style={styles.productText}>Contact</Text>
+           <Button title="Contact"  backgroundColor = "#ffaca0"  onPress={() => {navigation.navigate("FriendsActivities")}} />
           </View>
           <View style={styles.productItem}>
             <Image
               style={styles.productIcon}
               source={require("../assets/group11.png")}
             />
-            <Text style={styles.productText}>Course</Text>
+            <Button title="Course"  backgroundColor = "#ffaca0"  onPress={() => {navigation.navigate("MedicalCourses")}} />
           </View>
         </View>
       </View>
@@ -73,14 +74,14 @@ const Home = ({navigation}) => {
               style={styles.productIcon}
               source={require("../assets/group16.png")}
             />
-            <Text style={styles.productText}>Doctor</Text>
+            <Button title="Doctor"  backgroundColor = "#ffaca0"  onPress={() => {navigation.navigate("Profile")}} />
           </View>
           <View style={styles.productItem}>
             <Image
               style={styles.productIcon}
               source={require("../assets/group14.png")}
             />
-            <Text style={styles.productText}>Community</Text>
+            <Button title="Community"  backgroundColor = "#ffaca0"  onPress={() => {navigation.navigate("FriendsActivities")}} />
           </View>
         </View>
       </View>
@@ -89,7 +90,7 @@ const Home = ({navigation}) => {
         <Text style={styles.sectionTitle}>Connect with our</Text>
         <View style={styles.connectContainer}>
           <Text style={styles.connectText}>Available 24/7</Text>
-          <Button title="Chat Now" style={styles.button} />
+          <Button title="Chat Now" style={styles.button} onPress={() => {navigation.navigate("Chatbot")}} />
           <View style={styles.button}>
             <Image
               style={styles.buttonIcon}
@@ -227,6 +228,7 @@ const styles = StyleSheet.create({
     fontFamily: FontFamily.sourceSansPro,
     fontSize: FontSize.size_sm * scale,
     color: Color.colorGray_400,
+    
   },
   connectContainer: {
     flex: 1,

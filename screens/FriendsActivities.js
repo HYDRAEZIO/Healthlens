@@ -3,7 +3,7 @@ import { Image } from "expo-image";
 import { StyleSheet, Text, View } from "react-native";
 import { FontSize, FontFamily, Color } from "../GlobalStyles";
 
-const FriendsActivities = () => {
+const FriendsActivities = ({navigation}) => {
   return (
     <View style={styles.friendsActivities1}>
       <Image

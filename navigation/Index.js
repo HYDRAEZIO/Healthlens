@@ -4,7 +4,7 @@ import WelcomePage from "../screens/WelcomePage";
 import SignUp from "../screens/SignUp";
 import Home from "../screens/Home";
 import FriendsActivities from "../screens/FriendsActivities";
-import Profile from "../components/Profile";
+import profile from "../components/Profile";
 import AppointmentSchedule from "../screens/AppointmentSchedule";
 import Record from "../screens/Record";
 import EmergencySvreen from "../screens/EmergencySvreen";
@@ -13,6 +13,7 @@ import Medicines from "../screens/Medicines";
 import Profile1 from "../screens/Profile1";
 import MedicalCourses from "../screens/MedicalCourses";
 import login from "../screens/login";
+//import ChatBot from "../screens/Chatbot";
 
 const Stack = createStackNavigator();
 
@@ -81,10 +82,10 @@ function MyStack() {
        />
       <Stack.Screen
         name="Profile"
-        component={Profile}
+        component={profile}
         options={{ headerShown: false }}
       />
-
+      
     </Stack.Navigator>
   );
 }
