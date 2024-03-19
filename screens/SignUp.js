@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import { db } from "../firebase/config";
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { collection, addDoc, doc, setDoc } from "firebase/firestore";
 import {
   StyleSheet,
   Text,
@@ -15,6 +18,36 @@ export default function SignUp({ navigation }) {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [role, setRole] = useState("");
+
+  const auth = getAuth();
+  const onSignUpPress = () => {
+    if (password !== confirmPassword) {
+      alert("Passwords don't match.");
+      return;
+    }
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((response) => {
+        const uid = response.user.uid;
+        const data = {
+          id: uid,
+          email,
+          fullName,
+          role,
+        };
+
+        addDoc(collection(db, "users"), data)
+          .then(() => {
+            alert("Account Registered Successfully");
+            navigation.navigate("Home", { user: data });
+          })
+          .catch((error) => {
+            alert(error.message);
+          });
+      })
+      .catch((error) => {
+        alert(error.message);
+      });
+  };
 
   return (
     <View style={styles.container}>
@@ -67,10 +100,7 @@ export default function SignUp({ navigation }) {
           <Picker.Item label="Patient" value="patient" />
         </Picker>
       </View>
-      <TouchableOpacity
-        onPress={() => navigation.navigate("Home")}
-        style={styles.loginBtn}
-      >
+      <TouchableOpacity onPress={() => onSignUpPress()} style={styles.loginBtn}>
         <Text style={styles.signUpText}>Sign Up</Text>
       </TouchableOpacity>
     </View>
