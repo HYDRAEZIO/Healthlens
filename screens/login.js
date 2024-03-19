@@ -1,9 +1,47 @@
-import React, { useState } from 'react';
-import { StyleSheet, Text, View, TextInput, TouchableOpacity,Image ,navigation } from 'react-native';
+import React, { useState } from "react";
+import {
+  StyleSheet,
+  Text,
+  View,
+  TextInput,
+  TouchableOpacity,
+  Image,
+  navigation,
+} from "react-native";
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { db } from "../firebase/config";
+import { collection, getDoc, doc } from "firebase/firestore";
+export default function App({ navigation }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const auth = getAuth();
 
-export default function App({navigation}) {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const onLoginPress = () => {
+    signInWithEmailAndPassword(auth, email, password)
+      .then((response) => {
+        // const uid = response.user.uid;
+        // const usersRef = collection(db, "users");
+        // const userDocRef = doc(usersRef, uid);
+        // alert(JSON.stringify(userDocRef))
+        navigation.navigate("Home");
+        // getDoc(userDocRef)
+        //   .then((userDoc) => {
+        //     if (userDoc.exists()) {
+        //       const userData = userDoc.data();
+        //       userData.id = uid;
+        //       navigation.navigate("Home", { user: userData });
+        //     } else {
+        //       alert("User not found");
+        //     }
+        //   })
+        //   .catch((error) => {
+        //     alert(error.message);
+        //   });
+      })
+      .catch((error) => {
+        alert(error.message);
+      });
+  };
   return (
     <View style={styles.container}>
       <Image source={require("../assets/group22.png")} style={styles.image} />
@@ -27,10 +65,15 @@ export default function App({navigation}) {
       <TouchableOpacity>
         <Text style={styles.forgot_button}>Forgot Password?</Text>
       </TouchableOpacity>
-       <TouchableOpacity onPress={()=>{navigation.navigate("SignUp")}} style={styles.loginBtn}>
+      <TouchableOpacity
+        onPress={() => {
+          navigation.navigate("SignUp");
+        }}
+        style={styles.loginBtn}
+      >
         <Text style={styles.signUpText}>Sign Up</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.loginBtn} onPress={()=>{navigation.navigate("Home")}}>
+      <TouchableOpacity style={styles.loginBtn} onPress={() => onLoginPress()}>
         <Text style={styles.loginText}>LOGIN</Text>
       </TouchableOpacity>
     </View>
