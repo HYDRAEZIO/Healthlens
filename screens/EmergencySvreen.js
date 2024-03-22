@@ -7,7 +7,7 @@ import {
   SafeAreaView,
   TouchableOpacity,
   Dimensions,
-  Platform, // For platform-specific styling (optional)
+  
 } from 'react-native';
 
 const CareConnect = () => {
@@ -124,4 +124,6 @@ const styles = StyleSheet.create({
     marginTop: 20,
     alignItems: 'center',
   },
-  loginText
+  loginText 
+
+});
