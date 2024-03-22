@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Image, Dimensions, StyleSheet, Text, View , ScrollView, Button ,TouchableOpacity } from "react-native";
+import { Image, Dimensions, StyleSheet, Text, View , ScrollView, Button ,TouchableOpacity,Linking } from "react-native";
 import { Color, FontFamily, FontSize ,ButtonSize } from "../GlobalStyles";
 
 
@@ -26,7 +26,7 @@ const Home = ({navigation}) => {
               style={styles.buttonIcon}
               source={require('../assets/vector1.png')} // Assuming the image is in the assets folder
             />
-            <Button title="Get Started" style={styles.halfButton} onPress={() => {navigation.navigate("HealthCheckup")}} />
+            <Button title="Get Started" style={styles.halfButton} onPress={() => {navigation.navigate("HealthCheckup")}} color="black" />
           </View>
         </View>
       </View>
@@ -40,28 +40,28 @@ const Home = ({navigation}) => {
               style={styles.productIcon}
               source={require("../assets/group8.png")}
             />
-            <Button title="Health"  backgroundColor = "#ffaca0"  onPress={() => {navigation.navigate("Profile1")}} />
+            <Button title="Health"   onPress={() => {navigation.navigate("Profile1")}} color="black" />
           </View>
           <View style={styles.productItem}>
             <Image
               style={styles.productIcon}
               source={require("../assets/group10.png")}
             />
-           <Button title="Medicines"  backgroundColor = "#ffaca0"  onPress={() => {navigation.navigate("Medicines")}} />
+           <Button title="Medicines"  backgroundColor = "#ffaca0"  onPress={() => {navigation.navigate("Medicines")}} color="black" />
           </View>
           <View style={styles.productItem}>
             <Image
               style={styles.productIcon}
               source={require("../assets/group12.png")}
             />
-           <Button title="Contact"  backgroundColor = "#ffaca0"  onPress={() => {navigation.navigate("FriendsActivities")}} />
+           <Button title="Contact"  backgroundColor = "#ffaca0"  onPress={() => {navigation.navigate("FriendsActivities")}} color="black" />
           </View>
           <View style={styles.productItem}>
             <Image
               style={styles.productIcon}
               source={require("../assets/group11.png")}
             />
-            <Button title="Course"  backgroundColor = "#ffaca0"  onPress={() => {navigation.navigate("MedicalCourses")}} />
+            <Button title="Course"  backgroundColor = "#ffaca0"  onPress={() => {navigation.navigate("MedicalCourses")}} color="black" />
           </View>
         </View>
       </View>
@@ -74,14 +74,14 @@ const Home = ({navigation}) => {
               style={styles.productIcon}
               source={require("../assets/group16.png")}
             />
-            <Button title="Doctor"  backgroundColor = "#ffaca0"  onPress={() => {navigation.navigate("Profile")}} />
+            <Button title="Doctor"  backgroundColor = "#ffaca0"  onPress={() => {navigation.navigate("Profile")}} color="black" />
           </View>
           <View style={styles.productItem}>
             <Image
               style={styles.productIcon}
               source={require("../assets/group14.png")}
             />
-            <Button title="Community"  backgroundColor = "#ffaca0"  onPress={() => {navigation.navigate("FriendsActivities")}} />
+            <Button title="Emergency"  backgroundColor = "#ffaca0"  onPress={() => Linking.openURL("http://maps.apple.com/?q=Ambulance")} color="black" />
           </View>
         </View>
       </View>
@@ -90,7 +90,7 @@ const Home = ({navigation}) => {
         <Text style={styles.sectionTitle}>Connect with our</Text>
         <View style={styles.connectContainer}>
           <Text style={styles.connectText}>Available 24/7</Text>
-          <Button title="Chat Now" style={styles.button} onPress={() => {navigation.navigate("Chatbot")}} />
+          <Button title="Chat Now" style={styles.button} onPress={() => {navigation.navigate("Chatbot")}} color="black" />
           <View style={styles.button}>
             <Image
               style={styles.buttonIcon}
@@ -108,10 +108,13 @@ const Home = ({navigation}) => {
       <View style={styles.footer}>
         
         <View style={styles.footerIcons}>
-          <Image
-            style={styles.footerIconItem}
-            source={require("../assets/frame4.png")}
-          />
+    <TouchableOpacity onPress={() => onPress()}>
+  <Image
+    style={styles.footerIconItem}
+    source={require("../assets/frame4.png")}
+  />
+</TouchableOpacity>
+
           <Image
             style={styles.footerIconItem}
             source={require("../assets/frame1.png")}
@@ -187,21 +190,20 @@ const styles = StyleSheet.create({
     marginBottom: 10 * scale,
   },
   buttonContainer: {
-    alignItems: "flex-end",
+    alignItems: "center",
   },
   button: {
       flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: 'white', // Light red color
     alignItems: 'center',
     justifyContent: 'center',
   },
-  buttonIcon: {
+    buttonIcon: {
     width: 16 * scale,
     height: 16 * scale,
     resizeMode: "contain",
     marginRight: 5 * scale,
     marginBottom: 20,
-
   },
   buttonText: {
     fontFamily: FontFamily.sourceSansPro,
@@ -228,7 +230,6 @@ const styles = StyleSheet.create({
     fontFamily: FontFamily.sourceSansPro,
     fontSize: FontSize.size_sm * scale,
     color: Color.colorGray_400,
-    
   },
   connectContainer: {
     flex: 1,
@@ -242,7 +243,7 @@ const styles = StyleSheet.create({
     marginBottom: 10
   },
   connectImage: {
-     width: 100,
+    width: 100,
     height: 100,
     borderRadius: 50,
   },
