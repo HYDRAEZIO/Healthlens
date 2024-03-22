@@ -1,12 +1,18 @@
-import * as React from "react";
+import React , {useState} from "react";
 import { Image } from "expo-image";
 import { StyleSheet, Text, View } from "react-native";
 import { FontSize, FontFamily, Color } from "../GlobalStyles";
+import { useWindowDimensions } from "react-native";
 
-const FriendsActivities = ({navigation}) => {
+
+const FriendsActivities = () => {
+  const window = useWindowDimensions();
+  const [expanded, setExpanded] = useState(false);
+
   return (
     <View style={styles.friendsActivities1}>
-      <Image
+      
+       <Image
         style={[styles.vectorIcon, styles.iconGroupLayout]}
         contentFit="cover"
         source={require("../assets/vector8.png")}
