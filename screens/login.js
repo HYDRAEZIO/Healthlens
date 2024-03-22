@@ -12,8 +12,8 @@ import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { db } from "../firebase/config";
 import { collection, getDoc, doc } from "firebase/firestore";
 export default function App({ navigation }) {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("rahulrajv1976@gmail.com");
+  const [password, setPassword] = useState("RAJ@2002");
   const auth = getAuth();
 
   const onLoginPress = () => {
