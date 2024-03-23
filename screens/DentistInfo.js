@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Image } from "expo-image";
-import { StyleSheet, Text, View } from "react-native";
-import { Color, FontFamily, FontSize } from "../GlobalStyles";
+import { StyleSheet, Text, View ,Linking ,TouchableOpacity } from "react-native";
+import { Color, FontFamily, FontSize ,ButtonSize} from "../GlobalStyles";
 
 const DentistInfo = () => {
   return (
@@ -109,11 +109,10 @@ const DentistInfo = () => {
           123 Main Street, City, Country
         </Text>
       </View>
-      <View style={[styles.group10, styles.groupPosition]}>
-        <Text style={[styles.painInOr, styles.painInOrPosition]}>
-          Phone: +1 234 567 890
-        </Text>
-      </View>
+      <TouchableOpacity
+        style={ButtonSize}
+          onPress={() => Linking.openURL("http://maps.apple.com/?q=Dentist")}
+      ></TouchableOpacity>
       <Image
         style={[styles.groupIcon6, styles.iconPosition]}
         contentFit="cover"

@@ -1,9 +1,10 @@
 import * as React from "react";
 import { Image } from "expo-image";
-import { StyleSheet, Text, View } from "react-native";
-import { Color, FontFamily, FontSize } from "../GlobalStyles";
+import { StyleSheet, Text, View ,Linking} from "react-native";
+import { Color, FontFamily, FontSize , ButtonSize } from "../GlobalStyles";
+import { TouchableOpacity } from "react-native-gesture-handler";
 
-const HealthCheckup = () => {
+const HealthCheckup = ({ navigation }) => {
   return (
     <View style={styles.healthCheckup1}>
       <Image
@@ -51,11 +52,13 @@ const HealthCheckup = () => {
           Manage medications
         </Text>
       </View>
-      <View style={[styles.group2, styles.groupLayout1]}>
+      
+      <View style={[styles.group2, styles.groupLayout1]}>  
         <Text style={[styles.trackWorkouts, styles.nutritionTypo]}>
           Find your doctor
-        </Text>
+        </Text>  
       </View>
+      
       <Image
         style={styles.maskGroupIcon}
         contentFit="cover"
@@ -153,6 +156,10 @@ const HealthCheckup = () => {
         contentFit="cover"
         source={require("../assets/mask-group22.png")}
       />
+      <TouchableOpacity
+        style={ButtonSize}
+          onPress={() => {navigation.navigate("DentistInfo")}}
+      >
       <Image
         style={[styles.groupIcon8, styles.groupIconPosition1]}
         contentFit="cover"
@@ -163,19 +170,29 @@ const HealthCheckup = () => {
         contentFit="cover"
         source={require("../assets/mask-group23.png")}
       />
+      </TouchableOpacity>
+      <TouchableOpacity
+        style={ButtonSize}
+          onPress={() => {navigation.navigate("DentistInfo")}}
+      >
       <Image
         style={[styles.groupIcon9, styles.groupIconPosition1]}
         contentFit="cover"
         source={require("../assets/group79.png")}
       />
+      </TouchableOpacity>
       <View style={[styles.group9, styles.groupLayout]}>
         <Text style={styles.dentist}>Dentist</Text>
       </View>
+      <TouchableOpacity
+        style={ButtonSize}
+          onPress={() => {navigation.navigate("OrthopedicClinicLocator")}}
+      >
       <Image
         style={[styles.groupIcon10, styles.groupIconPosition1]}
         contentFit="cover"
         source={require("../assets/group80.png")}
-      />
+      /></TouchableOpacity>
       <Image
         style={[styles.maskGroupIcon5, styles.maskGroupPosition1]}
         contentFit="cover"
@@ -687,7 +704,7 @@ const styles = StyleSheet.create({
     position: "absolute",
   },
   group9: {
-    width: "9.6%",
+    width: "19.6%",
     top: "78.63%",
     right: "45.07%",
     bottom: "19.7%",
@@ -725,9 +742,9 @@ const styles = StyleSheet.create({
   group10: {
     top: "93.36%",
     right: "71.2%",
-    bottom: "4.97%",
+    bottom: "14.97%",
     left: "11.73%",
-    width: "17.07%",
+    width: "27.07%",
     height: "1.67%",
   },
   groupIcon13: {
