@@ -108,7 +108,7 @@ const Home = ({navigation}) => {
       <View style={styles.footer}>
         
         <View style={styles.footerIcons}>
-    <TouchableOpacity onPress={() => navigation.navigate("")}>
+    <TouchableOpacity onPress={() => navigation.navigate("VideoCall")}>
   <Image
     style={styles.footerIconItem}
     source={require("../assets/frame4.png")}

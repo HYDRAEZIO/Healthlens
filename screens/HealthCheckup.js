@@ -156,10 +156,7 @@ const HealthCheckup = ({ navigation }) => {
         contentFit="cover"
         source={require("../assets/mask-group22.png")}
       />
-      <TouchableOpacity
-        style={ButtonSize}
-          onPress={() => {navigation.navigate("DentistInfo")}}
-      >
+      
       <Image
         style={[styles.groupIcon8, styles.groupIconPosition1]}
         contentFit="cover"
@@ -170,7 +167,7 @@ const HealthCheckup = ({ navigation }) => {
         contentFit="cover"
         source={require("../assets/mask-group23.png")}
       />
-      </TouchableOpacity>
+      
       <TouchableOpacity
         style={ButtonSize}
           onPress={() => {navigation.navigate("DentistInfo")}}
