@@ -18,8 +18,7 @@ import DentistInfo from "../screens/DentistInfo";
 import NeuroHealth from "../screens/NeuroHealth";
 import OrthopedicClinicLocator from "../screens/OrthopedicClinicLocator";
 import VaccinationInformation from "../screens/VaccinationInformation";
-import VideoCall from "../screens/VideoCall";
-//import ChatBot from "../screens/Chatbot";
+
 
 const Stack = createStackNavigator();
 
