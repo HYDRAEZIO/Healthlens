@@ -40,7 +40,7 @@ const WelcomePage = ({navigation}) => {
       <Image
         style={[styles.groupIcon, styles.groupIconLayout]}
         contentFit="cover"
-        source={require("../assets/group20.png")}
+        source={require("../assets/icon.jpeg")}
       />
     </View>
   );

@@ -112,7 +112,7 @@ function MyStack() {
         component={NeuroHealth}
         options={{ headerShown: false }}
       />
-      
+  
     </Stack.Navigator>
   );
 }
